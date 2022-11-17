@@ -1,0 +1,11 @@
+pandas
+numpy
+scikit-learn
+nltk
+sentence-transformers
+umap-learn
+joblib==1.1.0
+hdbscan
+tomotopy
+fastapi
+uvicorn

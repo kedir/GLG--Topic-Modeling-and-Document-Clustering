@@ -1,0 +1,9 @@
+transformers==2.6.0
+pandas
+numpy
+tqdm
+fastapi
+uvicorn
+torch==1.12.1
+keras==2.9.0
+keras-preprocessing==1.1.2
