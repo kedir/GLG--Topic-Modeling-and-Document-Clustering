@@ -158,7 +158,7 @@ with tab1:
 
 
     if submit_button:
-        if doc_txt != "":
+        if doc_txt != "" and len(doc_txt.split(" ")) > 12:
             with st.spinner("Generating topics..."):
                 data = {"document": {"0": doc_txt}}
                 topics = get_topics(url, data)
@@ -206,7 +206,8 @@ with tab1:
 
                         st.header("Local Topics as a wordcloud")
                         plot_wordcloud(local_topic_label)
-
+        else:
+            st.warning('Please insert a document', icon="⚠️")
 with tab2: 
     with st.expander("ℹ️ Named Entity Recognition", expanded=True):
 
