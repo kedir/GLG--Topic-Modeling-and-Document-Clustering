@@ -1,10 +1,10 @@
 # app/Dockerfile
 
-FROM python:3.8
+FROM python:3.7
 
 EXPOSE 8501
 
-WORKDIR .
+WORKDIR /src/app
 
 RUN apt-get update && apt-get install -y \
     build-essential \
@@ -21,4 +21,8 @@ COPY app/requirements.txt .
 
 RUN pip install --no-cache-dir -U -r  requirements.txt
 
-CMD ["streamlit", "run", "main.py", "--host=0.0.0.0", "--port=8501"]
+COPY app/ .
+
+ENTRYPOINT ["streamlit", "run"]
+
+CMD ["main.py", "--browser.gatherUsageStats=false", "--global.disableWatchdogWarning=true"]

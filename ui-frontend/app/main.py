@@ -8,7 +8,6 @@ import pandas as pd
 import json
 import PyPDF2
 import os
-import itertools
 
 from examples import EXAMPLES
 from ner_examples import NER_EXAMPLES
@@ -17,10 +16,6 @@ from PIL import Image
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 import matplotlib.pyplot as plt
 import numpy as np
-
-# pip install st-annotated-text
-# pip install wordcloud
-# pip install Pillow
 
 try:
     import StringIO
@@ -74,8 +69,8 @@ def plot_wordcloud(list_topic:list) -> None:
 
 
 
-url = 'http://0.0.0.0:8000/topic/predict'
-url_ner = 'http://0.0.0.0:9000/ner/predict'
+url = 'http://backendtopic:8000/topic/predict'
+url_ner = 'http://backendner:9000/ner/predict'
 
 
 st.set_page_config(page_title="GlgCapstone-Demo", page_icon=":star:", layout="wide")

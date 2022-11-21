@@ -1,0 +1,26 @@
+version: "3.7"
+services:
+  backendtopic:
+    build: src_topic
+    ports:
+      - "8000:8000"
+    networks: 
+      - AIservice 
+
+  backendner:
+    build: src_ner
+    ports:
+      - "9000:9000"
+    networks: 
+      - AIservice
+
+  frontend:
+    build: ui-frontend
+    ports:
+      - "8501:8501"
+    networks:
+      - AIservice
+
+networks:
+  AIservice:
+    external: true
