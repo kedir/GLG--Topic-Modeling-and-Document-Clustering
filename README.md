@@ -142,6 +142,8 @@ The purpose of this project is to develop an NLP model capable of recognizing an
 <!--Topic Modeling Pipeline-->
 ## Topic Modeling Pipeline
 
+![alt text](https://github.com/kedir/GLG--Topic-Modeling-and-Document-Clustering/blob/main/doc/topic_modeling_pipeline.png)
+
 <p align="justify">
 Topic models are useful tools to discover latent topics in collections of documents. In this section below,  we look into details of the various parts of the topic modeling pipeline with highlights and key findings. 
 </p>
@@ -232,7 +234,9 @@ To package the whole solution which uses multiple images/containers, I used Dock
 
 You can see the frontend app in the browser using : http://localhost:8501/ or
 If you are launching the app in the cloud, replace localhost with your public Ip address. 
- 
+
+![alt text](https://github.com/kedir/GLG--Topic-Modeling-and-Document-Clustering/blob/main/doc/frontend_main.png)
+
 Please refer to this Documentation for more.
 
 _For more examples, please refer to the [Documentation](https://github.com/kedir/GLG--Topic-Modeling-and-Document-Clustering/tree/main/doc)_
