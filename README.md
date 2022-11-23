@@ -188,6 +188,8 @@ Topic models are useful tools to discover latent topics in collections of docume
 
 * Below is an example of an input and output of our named entity model, served with a streamlit app.
 
+![alt text](https://github.com/kedir/GLG--Topic-Modeling-and-Document-Clustering/blob/main/doc/ner_example.png)
+
 </p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
