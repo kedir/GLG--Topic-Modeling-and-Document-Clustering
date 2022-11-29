@@ -6,7 +6,7 @@
 *** or simply open an issue with the tag "enhancement".
 *** Don't forget to give the project a star!
 *** Thanks again! Now go create something AMAZING! :D
--->
+--
 
 
 
@@ -30,7 +30,7 @@
 <br />
 <div align="center">
 
-  <h3 align="center">Forthbrain NLP Capstone Project (GLG Topic Modeling and Named Entity Recognation)
+  <h3 align="center">Fourthbrain NLP Capstone Project (GLG Topic Modeling and Named Entity Recognition)
 </h3>
 
 </div>
@@ -42,7 +42,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#project-describtion">Project Describtion</a>
+      <a href="#project-describtion">Project Description</a>
     </li>
      <li>
       <a href="#project-objective">Project Objective</a>
@@ -51,7 +51,7 @@
       <a href="#built-with">Built With</a>
     </li>
      <li>
-      <a href="#data-source">Data Source</a>
+      <a href="#data-source">Data Sources</a>
     </li>
     <li>
       <a href="#topic-modeling-pipeline">Topic Modeling Pipeline</a>
@@ -64,7 +64,7 @@
       </ul>
     </li>
     <li>
-      <a href="#named-entity-recognation">Named Entity Recognation</a>
+      <a href="#named-entity-recognation">Named Entity Recognition</a>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
@@ -84,10 +84,10 @@
 
 
 <!--PROJECT Describtion-->
-## Project Describtion
+## Project Description
 
 <p align="justify">
-GLG is the world’s insight network that connects decision makers to a network of experts so they can act with the confidence that comes from true clarity and have what it takes to get ahead. GLG receives a large amount of health and tech requests from clients seeking insights on topics of different domains. Preprocessing client requests and extracting relevant topic/keyword detection take extra time and need a large manpower. This project on Natural Language Processing (NLP) is aimed at improving the topic/keyword detection process from the client submitted reports and identifying the underlying patterns in submitted requests over time. The primary challenges include Named Entity Recognition (NER) and Pattern Recognition for Hierarchical Clustering of Topics.
+Gerson Lehrman Group(GLG) is a financial and information services firm.  It is insight network that connects decision makers to a network of experts so they can act with the confidence that comes from true clarity and have what it takes to get ahead. GLG receives a large amount requests (including  requests related to health and tech) from clients seeking insights on different topics. Manually preprocessing these client requests and extracting relevant topics/keywords is  time-consuming and requires a large manpower. This project uses Natural Language Processing (NLP) to improve the topic/keyword detection process from client-submitted reports and identifying the underlying patterns in submitted requests over time. The primary challenges include Named Entity Recognition (NER) and Pattern Recognition for Hierarchical Clustering of Topics.
 </p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -97,7 +97,7 @@ GLG is the world’s insight network that connects decision makers to a network 
 
 <p align="justify">
 
-The purpose of this project is to develop an NLP model capable of recognizing and clustering topics related to technological and healthcare terms given a large text corpus in an unsupervised manner and to develop a Named Entity Recognition model capable of extracting entities from a given sentence.
+The purpose of this project is to develop an NLP model capable of recognizing and clustering topics related to technological and healthcare terms given a large text corpus and to develop an NER model capable of extracting entities from a given sentence.
 
 </p>
 
@@ -112,7 +112,7 @@ The purpose of this project is to develop an NLP model capable of recognizing an
         <li>Scikit-learn</li>
         <li>Matplotlib</li>
         <li>Keras</li>
-        <li>Pythorch</li>
+        <li>PyTorch</li>
         <li>Seaborn</li>
         <li>Streamlit</li>
       </ul>
@@ -127,13 +127,23 @@ The purpose of this project is to develop an NLP model capable of recognizing an
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!--Data Source-->
-## Data Source
+## Data Sources
 
 <p align="justify">
 
 * [All the News 2.0](https://components.one/datasets/all-the-news-2-news-articles-dataset/) — This dataset contains 2,688,878 news articles and essays from 27 American publications, spanning January 1, 2016 to April 2, 2020.
 
-* [Annotated Corpus for NER](https://www.kaggle.com/abhinavwalia95/entity-annotated-corpus) — Annotated Corpus for Named Entity Recognition using GMB(Groningen Meaning Bank) corpus for entity classification with enhanced and popular features by Natural Language Processing applied to the data set.
+* [Annotated Corpus for NER](https://www.kaggle.com/abhinavwalia95/entity-annotated-corpus) — Annotated Corpus for Named Entity Recognition using GMB(Groningen Meaning Bank) corpus for entity classification with enhanced and popular features by Natural Language Processing applied to the data set. The different entities  in this dataset are:
+<ul>
+<li>geo = Geographical Entity	</li> 
+<li>org = Organization	</li>
+<li>per = Person	</li>	per = Person
+<li>gpe = Geopolitical Entity	</li>
+<li>tim = Time Indicator	</li>
+<li>art  = Artificact	</li>
+<li>eve = Event	</li>
+<li>nat =Natural Phenomenon	</li>
+</ul>
 
 </p>
 
@@ -149,13 +159,13 @@ Topic models are useful tools to discover latent topics in collections of docume
 </p>
 
 <p align="justify">
-<strong>Data Cleaning and Data Exploration:</strong> The first step in the pipeline is data cleaning and Data Exploration of news article dataset. From the original data we extract the news articles that focus only on the health and technology section. Then we performed different kinds of text data cleaning steps like:
+<strong>Data Cleaning and Data Exploration:</strong> The first step in the pipeline is data cleaning and data exploration of the news article dataset. From the original data we extract the news articles that focus only on the health and technology section. Then we performed different kinds of text data cleaning steps like:
       <ul>
         <li>punctuation and non-alphanumeric character removal.</li>
         <li>Tokenization: Split the text into sentences and the sentences into words. Lowercase the words and remove punctuation.</li>
-        <li>Words that have fewer than 3 characters are removed.</li>
-        <li>All stopwords are removed.</li>
-        <li>Words are lemmatized</li>
+        <li> Remove Words that have fewer than 3 characters.</li>
+        <li>Stopword removal.</li>
+        <li>Lemmatization</li>
       </ul>
 </p>
 
@@ -180,7 +190,7 @@ Topic models are useful tools to discover latent topics in collections of docume
 
 
 <!--Named Entity Recognation-->
-## Named Entity Recognation
+## Named Entity Recognition
 
 <p align="justify">
 
