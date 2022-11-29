@@ -1,0 +1,7 @@
+streamlit
+pandas
+numpy
+PyPDF2
+st-annotated-text
+wordcloud
+Pillow
